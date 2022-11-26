@@ -1,16 +1,64 @@
-<html>
-    <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
+<!DOCTYPE html>
+<html id="html" lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App -Simple Interest Calculator</title>
+    <link rel="stylesheet" href="test.css">
+    <script src="/test/test.js"></script>
+</head>
+<body>
+    <div id="box">
+        <h1 id="myHeader">Simple Interest Calculator</h1>
+     <div id="innerbox">
+        <label for="Amount">Amount</label>
+       
+        <input type="number"  id="principal" name="Amount">  <br/><br>
+       
+        <label for="ir">Interest Rate</label>
+        
+        <input type="range" min="1" max="20" step="0.01" value="1" oninput="rangeValue.innerText = this.value" id="rate" name="ir"> <span inline id="rangeValue">1</span> <span>%</span><br/><br>
+        
+        <label for="noy">No. of Years</label>
+        
+        <!--<input type="number"  id="years" name="nor">-->
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+        <select name="noy" id="noy">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option><option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            
+        </select>  <br/><br>
+        
+        <span id="result" name="Interest"></span>
+    
+        <button onclick="compute()">Compute Interest</button><br>
+        <br>
+        <span id="ans1" ></span><span id="s1" style="background-color:yellow ;"> </span><br>
+        <span id="ans2"></span><span id="s2" style="background-color:yellow ;"> </span><br>
+        <span id="ans3"></span><span id="s3" style="background-color:yellow ;"> </span><br>
+        <span id="ans4"></span><span id="s4" style="background-color:yellow ;"> </span>
+    
+     </div>
+     <div id="footer">
+        <br><br><footer id="footer"><b>&copy;</b> Everyone Can Get Rich</footer><br>
+       </div>
 
-        <button onclick="compute()">Compute</button>
-    </body>
+    </div>
+    
+</body>
 </html>
